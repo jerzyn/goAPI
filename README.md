@@ -74,7 +74,7 @@ Response:
 `play` function is POST endpoint which needs two parameters: the move a player is trying to make and the current board state. They both need to be passed as JSON in request's query or headers. Play function detects if the move is valid (played on an occupied or non-existend field) and legal (if it's a suicide move). It also checks if the move captures stones and applies this in the result. It returns board's state as a JSON. It uses Basic Auth for authentication and has to receive Base64 encoded username and password parameters to match the ones saved as a secret within webtask.io.
 
 Request:
-`curl -X POST https://YOUR_WEBTASK_URL/play?position={"x":4,"y":1}&board={"size":"19","moves":[{"x":4,"y":7,"color":"black"},{"x":4,"y":5,"color":"white"}],"white_prisoners":[],"black_prisoners":[],"current":"black","movesCount":0} -H`
+`curl -X POST https://YOUR_WEBTASK_URL/play?position={"x":4,"y":1}&board={"size":"19","moves":[{"x":4,"y":7,"color":"black"},{"x":4,"y":5,"color":"white"}],"white_prisoners":[],"black_prisoners":[],"current":"black","movesCount":0}`
 
 Response:
 ```{
