@@ -6,7 +6,8 @@ A simple REST API to play a game of Go
 
 You can upload the functions either by copy pasting the function code in the webtask.io web editor or using [Webtask CLI](https://webtask.io/cli "Webtask CLI"):
 
-```wt create create-board.js
+```
+wt create create-board.js
 wt create pass.js
 wt create play.js --secret USERNAME=YOUR_USERNAME --secret PASSWORD=YOUR_PASSWORD
 ```
@@ -30,7 +31,8 @@ Request:
 `curl https://YOUR_WEBTASK_URL/create_board?size=12`
 
 Response:
-```{
+```
+{
   "size": "12",
   "moves": [],
   "white_prisoners": 0,
@@ -48,7 +50,8 @@ Request:
 `curl https://YOUR_WEBTASK_URL/pass?board={"size":"19","moves":[{"x":4,"y":7,"color":"black"},{"x":4,"y":5,"color":"white"}],"white_prisoners":[],"black_prisoners":[],"current":"black","movesCount":0}`
 
 Response:
-```{
+```
+{
   "size": "19",
   "moves": [
     {
@@ -77,7 +80,8 @@ Request:
 `curl -X POST https://YOUR_WEBTASK_URL/play?position={"x":4,"y":1}&board={"size":"19","moves":[{"x":4,"y":7,"color":"black"},{"x":4,"y":5,"color":"white"}],"white_prisoners":[],"black_prisoners":[],"current":"black","movesCount":0}`
 
 Response:
-```{
+```
+{
   "size": "19",
   "moves": [
     {
