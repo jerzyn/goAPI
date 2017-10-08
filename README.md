@@ -25,8 +25,10 @@ Additionally there is a Slash Webtask function to play a simple game of go withi
 ### create_board.js
 
 `create_board` function runs with an optional `size` parameter which specifies the board size. The default size is 19. The function returns a new board as a JSON
+
 Request:
 `curl https://YOUR_WEBTASK_URL/create_board?size=12`
+
 Response:
 ```{
   "size": "12",
@@ -41,8 +43,10 @@ Response:
 ### pass.js
 
 `pass` function needs the current board state as a parameter. It is passed as a JSON file in request's query or header. The function returns an updated board state as a JSON
+
 Request:
 `curl https://YOUR_WEBTASK_URL/pass?board={"size":"19","moves":[{"x":4,"y":7,"color":"black"},{"x":4,"y":5,"color":"white"}],"white_prisoners":[],"black_prisoners":[],"current":"black","movesCount":0}`
+
 Response:
 ```{
   "size": "19",
@@ -71,6 +75,7 @@ Response:
 
 Request:
 `curl -X POST https://YOUR_WEBTASK_URL/play?position={"x":4,"y":1}&board={"size":"19","moves":[{"x":4,"y":7,"color":"black"},{"x":4,"y":5,"color":"white"}],"white_prisoners":[],"black_prisoners":[],"current":"black","movesCount":0} -H`
+
 Response:
 ```{
   "size": "19",
